@@ -1,28 +1,39 @@
-Prerequisite:
-Android Device (Stock unmodified device, no root or custom recovery required)
+# Prerequisite:
+# Android Device (Stock unmodified device, no root or custom recovery required)
 
-Installation:
-Install the NetHunter-Store app from store.nethunter.com
+# Installation:
+# Install the NetHunter-Store app from store.nethunter.com
 
-From the NetHunter Store, install Termux, NetHunter-KeX client, and Hacker’s keyboard Note: The button “install” may not change to “installed” in the store client after installation - just ignore it. Starting termux for the first time may seem stuck while displaying “installing” on some devices - just hit enter.
+# From the NetHunter Store, install Termux, NetHunter-KeX client, and Hacker’s keyboard 
+# Note: The button “install” may not change to “installed” in the store client after installation - just ignore it. 
+# Starting termux for the first time may seem stuck while displaying “installing” on some devices - just hit enter.
 
-Open Termux and type:
+# Open Termux and type:
 
-kali@kali:~$ termux-setup-storage
-kali@kali:~$ pkg install wget
-kali@kali:~$ wget -O install-nethunter-termux https://raw.githubusercontent.com/YallTrippin/termux-nh/main/installer
-kali@kali:~$ chmod +x install-nethunter-termux
-kali@kali:~$ ./install-nethunter-termux
-Usage:
-Open Termux and type one of the following:
+termux-setup-storage
+pkg install wget
+wget -O install-nethunter-termux https://raw.githubusercontent.com/YallTrippin/termux-nh/main/installer
+chmod +x install-nethunter-termux
+./install-nethunter-termux
 
-Command	To
-nethunter	start Kali NetHunter command line interface
-nethunter kex passwd	configure the KeX password (only needed before 1st use)
-nethunter kex &	start Kali NetHunter Desktop Experience user sessions
-nethunter kex stop	stop Kali NetHunter Desktop Experience
+# Usage:
+# Open Termux and type one of the following:
+
+nethunter	start 
+#Kali NetHunter command line interface
+
+nethunter kex passwd	
+# configure the KeX password (only needed before 1st use)
+
+nethunter kex &	
+# start Kali NetHunter Desktop Experience user sessions
+
+nethunter kex stop	
+# stop Kali NetHunter Desktop Experience
 nethunter <command>	run in NetHunter environment
-nethunter -r	start Kali NetHunter cli as root
+
+nethunter -r	
+# start Kali NetHunter cli as root
 nethunter -r kex passwd	configure the KeX password for root
 nethunter -r kex &	start Kali NetHunter Desktop Experience as root
 nethunter -r kex stop	stop Kali NetHunter Desktop Experience root sessions
@@ -38,7 +49,9 @@ NetHunter Editions:
 Please refer to this table for a comparison of the different NetHunter editions.
 
 Tips:
-Run sudo apt update && sudo apt full-upgrade -y first thing after installation to update Kali. If you have plenty of storage space available you might want to run sudo apt install -y kali-linux-default as well.
+Run 
+sudo apt update && sudo apt full-upgrade -y 
+first thing after installation to update Kali. If you have plenty of storage space available you might want to run sudo apt install -y kali-linux-default as well.
 All of the penetration testing tools should work but some might have restrictions, e.g. metasploit works but doesn’t have database support. If you discover any tools that don’t work, please post it in our forums.
 Some utilities like “top” won’t run on unrooted phones.
 Non-root users still have root access in the chroot. That’s a proot thing. Just be aware of that.
